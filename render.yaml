@@ -6,6 +6,6 @@ services:
     startCommand: gunicorn app:app
     envVars:
       - key: GROQ_API_KEY
-        value: your_groq_api_key
+        value: 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
       - key: HF_TOKEN
         value: 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
