@@ -1,11 +1,12 @@
-from flask import Flask, request, jsonify
-import requests
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-GROQ_API_KEY = 'your_groq_api_key'
-HF_TOKEN = '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'
+@app.route('/')
+def home():
+    return 'Welcome to FirstStocker Bot!'
 
+# Existing routes
 @app.route('/chat', methods=['POST'])
 def chat():
     user_input = request.json.get('message')
